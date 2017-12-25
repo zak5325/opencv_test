@@ -27,4 +27,4 @@ while(cap.isOpened()):
 		break
 cap.release()
 cv2.destroyAllWindows()
-#release the memory and destory the windows which cv2 output
+#release the memory and destory the windows which cv2 show
