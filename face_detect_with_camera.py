@@ -1,8 +1,8 @@
 import numpy as np
 import cv2
 
-face_cascade=cv2.CascadeClassifier('/Users/lirt/workspace/opencv/haarcascades/haarcascade_frontalface_default.xml')
-eye_cascade=cv2.CascadeClassifier('/Users/lirt/workspace/opencv/haarcascades/haarcascade_eye.xml')
+face_cascade=cv2.CascadeClassifier('/Users/lirt/workspace/opencv_test/haarcascades/haarcascade_frontalface_default.xml')
+eye_cascade=cv2.CascadeClassifier('/Users/lirt/workspace/opencv_test/haarcascades/haarcascade_eye.xml')
 cap = cv2.VideoCapture(0)
 while(cap.isOpened()):
 	ret, frame = cap.read()
