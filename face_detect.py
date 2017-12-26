@@ -28,9 +28,10 @@ while(cap.isOpened()):
 	#minNeighbors:The detected number of detected frames
 	for (x,y,w,h) in faces:
 		cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
-		cv2.imwrite(str(count)+'.jpg',frame)
+		cv2.imwrite(str(count)+'.jpg',frame[y:y+h, x:x+w],[cv2.IMWRITE_JPEG_QUALITY, 100])
 		count=count+1
 		#deploy a rectangle with (x,y) to (x+w,y+h) size's,and color(255,0,0),2 stands for thickness of that rectangle
+	cv2.namedWindow('frame', cv2.WINDOW_NORMAL)
 	cv2.imshow('frame',frame)
 	#show what camera get and the rectangle you put etc.
 	if cv2.waitKey(1) & 0xFF == ord('q'):  #press q to exit
